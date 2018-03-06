@@ -115,7 +115,8 @@
 // variable named ourTitle.
 // console.log it and see what you get!
 
-
+var ourTitle = document.querySelector("h1");
+console.log(ourTitle);
 
 
 
@@ -141,19 +142,21 @@
 
 // TODO: Get all <li> elements from the page in a variable named mediaLinks.
 
+var mediaLinks = document.querySelectorAll('li');
 
 
 
 // TODO: Now console.log mediaLinks.length
 
-
+console.log(mediaLinks.length);
 
 
 // TODO: Do you remember loops from level 2? Using this knowledge, iterate
 // through each mediaLinks item and console.log it.
 
-
-
+for (i =0; i <= mediaLinks.length; i++) {
+  console.log(mediaLinks[i]);
+}
 
 
 
@@ -173,7 +176,7 @@
 
 // TODO: Get the content of 'h1' element and console.log it.
 
-
+console.log(document.querySelector('h1').textContent);
 
 
 
@@ -199,7 +202,7 @@
 // TODO: Make up a new title! Change the content of our 'h1' to anything you
 // like.
 
-
+document.querySelector('h1').textContent = "This is my new Title!"
 
 
 
@@ -219,7 +222,7 @@
 // TODO: Update the value of the 'src' attribute of our img tag to
 // "img/kittens.jpeg"
 
-
+document.querySelector('img').src = "img/kittens.jpeg"
 
 
 
@@ -244,7 +247,7 @@
 // TODO: Get any element on the page and change some styles for it.
 
 
-
+document.querySelector('h2').style.color = "red";
 
 
 
@@ -275,7 +278,10 @@
 //
 // P.S. You also can give styles to the new node that you create.
 
-
+pageNode = document.querySelector("body");
+logo = document.createElement("img");
+document.querySelector("img").src = "img/logo.png";
+pageNode.appendChild(logo);
 
 
 
